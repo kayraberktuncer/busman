@@ -1,7 +1,12 @@
 import React from 'react'
+import { Container } from '@material-ui/core'
 
 function App() {
-  return <div>Hello World</div>
+  return (
+    <Container maxWidth="xl">
+      <div>Hello World</div>
+    </Container>
+  )
 }
 
 export default App
