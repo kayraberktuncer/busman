@@ -6,7 +6,9 @@
   "author": "kayraberktuncer <kayrabtuncer@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "board": "cd board && yarn start"
   },
   "dependencies": {
     "cors": "^2.8.5",
