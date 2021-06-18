@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Footer from '../comps/footer'
+import Footer from './comps/footer'
 
 export default function Home() {
   return (
