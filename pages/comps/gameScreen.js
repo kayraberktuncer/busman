@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 export default function gameScreen({
   name,
   title,
@@ -8,13 +10,21 @@ export default function gameScreen({
   setPrice,
   price,
 }) {
+  const [seconds, setSeconds] = useState(3)
+
   function pricePlus() {
     setPrice(price + 15)
   }
 
   function handleClick(event) {
-    setTimeout(pricePlus(), 3000)
-    setNol(nol + 1)
+    setSeconds(3)
+    if (seconds == 0) {
+      pricePlus()
+      setNol(nol + 1)
+      alert('calisti')
+    } else {
+      setTimeout(() => setSeconds(seconds - 1), 1000)
+    }
     event.preventDefault()
   }
 
@@ -137,7 +147,7 @@ export default function gameScreen({
                   <div className="text-xs uppercase font-light text-gray-500">
                     Watch Time
                   </div>
-                  <div className="text-xl font-bold">31h 2m</div>
+                  <div className="text-xl font-bold">{seconds}s</div>
                 </div>
                 <svg
                   className="stroke-current text-gray-500"
