@@ -1,10 +1,17 @@
-import HomeForm from "../components/HomeForm.js";
+import { useEffect } from "react";
+import HomeForm from "../components/HomeForm";
+import UserDetail from "../components/UserDetail";
 
-function HomePage() {
+export function HomePage({ getAllData, setUserData }) {
+  useEffect(() => {
+    getAllData();
+  }, [getAllData]);
+
   return (
     <div>
       <h1>BUSMAN</h1>
       <HomeForm />
+      <UserDetail />
     </div>
   );
 }
