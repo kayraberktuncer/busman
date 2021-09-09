@@ -18,7 +18,7 @@ export function HomeForm({ userData, setUserData }) {
               setUserData({ ...userData, companyName: e.target.value })
             }
             name="companyName"
-            id="companyName"
+            id="company-name"
             placeholder="Company Name"
           />
         </div>
