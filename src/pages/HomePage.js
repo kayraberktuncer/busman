@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import HomeForm from "../components/HomeForm";
 import UserDetail from "../components/UserDetail";
 
-export function HomePage({ getAllData, setUserData }) {
+export function HomePage({ getAllData, userData, setUserData }) {
   useEffect(() => {
     getAllData();
   }, [getAllData]);
@@ -10,8 +10,8 @@ export function HomePage({ getAllData, setUserData }) {
   return (
     <div>
       <h1>BUSMAN</h1>
-      <HomeForm />
-      <UserDetail />
+      <HomeForm userData={userData} setUserData={setUserData} />
+      <UserDetail getAllData={getAllData} />
     </div>
   );
 }

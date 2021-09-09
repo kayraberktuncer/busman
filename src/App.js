@@ -20,7 +20,11 @@ function App() {
   };
   return (
     <div>
-      <HomePage getAllData={getAllData} setUserData={setUserData} />
+      <HomePage
+        getAllData={getAllData}
+        userData={userData}
+        setUserData={setUserData}
+      />
     </div>
   );
 }
